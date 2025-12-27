@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "default-avatar",
+      "description": "Default user avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1645558179251-5a2c6b923f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhYnN0cmFjdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjYzNzA0MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract person"
+    }
+  ]
+}

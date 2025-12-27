@@ -1,0 +1,19 @@
+# The name of the backend that will be created in App Hosting
+backend: ln-expense-manager
+# The region to deploy the backend to
+location: us-central1
+# The command to build the app
+build: npm run build
+# The command to start the app
+run: npm run start
+# The name of the GitHub repository
+repository: Tiopaulinho/meu-app-financeiro
+# The branch to deploy from
+branch: main
+# Environment variables
+env:
+  - variable: FIREBASE_CONFIG
+    # This value is automatically populated by App Hosting
+    value: __FIREBASE_CONFIG__
+  - variable: GENKIT_ENV
+    value: prod

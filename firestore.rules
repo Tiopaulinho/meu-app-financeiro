@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    match /transactions/{transactionId} {
+      allow read, update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+
+    // Allow a user to list their own transactions, regardless of other query constraints.
+    // This is secure because get() and list() are billed by the number of documents
+    // read, and the rules are not filters. The client MUST query by userId.
+    match /transactions/{document=**} {
+       allow list: if request.auth != null && request.query.where.get('userId', '') == request.auth.uid;
+    }
+  }
+}
