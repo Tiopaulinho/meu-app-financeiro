@@ -10,8 +10,8 @@ const firebaseConfig: FirebaseOptions = {
   projectId: "lnfinance",
   storageBucket: "lnfinance.firebasestorage.app",
   messagingSenderId: "718930418010",
-  appId: "1:718930418010:web:b687ce5b74099b14823b63",
-  measurementId: "G-CZEWBNFE37"
+  appId: "1:718930418010:web:c8bc146a06af43be823b63",
+  measurementId: "G-R99HNCN4N9"
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig, "client") : getApp("client");
